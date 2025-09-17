@@ -6,14 +6,15 @@
     <title>fyrna</title>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
     />
     <style>
       :root {
         --bg: #0d0d0d;
         --text: #eaeaea;
         --text-light: #aaa;
-        --accent: #fff;
+        --accent: #ff8ac9;
+        --accent-hover: #ffb6d9;
         --border: #222;
       }
 
@@ -26,55 +27,73 @@
       body {
         font-family: "IBM Plex Mono", monospace;
         font-size: 15px;
-        line-height: 1.6;
+        line-height: 1.7;
         color: var(--text);
-        background: var(--bg);
+        background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
         flex-direction: column;
+        padding: 1rem;
+      }
+
+      main {
+        padding: 2.5rem;
+        max-width: 65ch;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        box-shadow: 0 8px 20px rgba(255, 138, 201, 0.05);
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: bold;
         color: var(--accent);
-        margin-bottom: 0.5rem;
+        margin: 1rem 0 0.8rem;
+        letter-spacing: 0.5px;
       }
 
       p {
         color: var(--text-light);
-        margin-bottom: 1rem;
-      }
-
-      main {
-        padding: 2.5rem 1rem;
-        max-width: 65ch;
-      }
-
-      .list {
-        text-align: center;
-        margin-top: 2rem;
-        padding-top: 1rem;
-        color: var(--text-light);
-        font-size: 0.9rem;
-      }
-
-      .list a {
-        color: var(--text-light);
-        margin: 0 0.5rem;
-      }
-
-      .list a:hover {
-        color: var(--accent);
+        margin-bottom: 1.2rem;
       }
 
       .pfp {
         border-radius: 20px;
-        width: 100px;
+        width: 110px;
         height: auto;
-        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 14px rgba(255, 138, 201, 0.25);
+        border: 2px solid var(--accent);
+        transition: transform 0.3s ease;
+      }
+
+      .pfp:hover {
+        transform: scale(1.05);
+      }
+
+      .list {
+        margin-top: 2rem;
+        font-size: 0.95rem;
+        text-align: center;
+      }
+
+      .list a {
+        color: var(--text-light);
+        margin: 0 0.6rem;
+        transition: color 0.2s ease, text-shadow 0.3s ease;
+      }
+
+      .list a:hover {
+        color: var(--accent-hover);
+        text-shadow: 0 0 6px var(--accent);
+      }
+
+      @media(max-width: 680px) {
+        main {
+          padding: 1.5rem 1rem;
+        }
       }
     </style>
   </head>
@@ -102,7 +121,7 @@
         writing little pieces of thoughts whenever inspiration comes.
       </p>
 
-      <div class="list center">
+      <div class="list">
         <p>
           you can find me here: <br />
           <a href="https://github.com/fyrna">github</a> •
