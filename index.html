@@ -1,12 +1,12 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fyrna</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
     />
     <style>
       :root {
@@ -15,7 +15,8 @@
         --text-light: #aaa;
         --accent: #ff8ac9;
         --accent-hover: #ffb6d9;
-        --border: #222;
+        --border: #2a2a2a;
+        --radius: 1rem;
       }
 
       * {
@@ -25,34 +26,40 @@
       }
 
       body {
-        font-family: "IBM Plex Mono", monospace;
+        font-family: "Nunito", sans-serif;
         font-size: 15px;
         line-height: 1.7;
         color: var(--text);
-        background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+        background: var(--bg);
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        flex-direction: column;
         padding: 1rem;
       }
 
       main {
-        padding: 2.5rem;
-        max-width: 65ch;
-        background: rgba(255, 255, 255, 0.02);
+        max-width: 60ch;
+        padding: 2rem;
+        background: #141414;
         border: 1px solid var(--border);
-        border-radius: 1rem;
-        box-shadow: 0 8px 20px rgba(255, 138, 201, 0.05);
+        border-radius: var(--radius);
+        text-align: center;
+      }
+
+      .pfp {
+        border-radius: var(--radius);
+        width: 100px;
+        height: auto;
+        border: 2px solid var(--accent);
+        margin-bottom: 1rem;
       }
 
       h1 {
-        font-size: 2.2rem;
-        font-weight: bold;
+        font-size: 1.9rem;
+        font-weight: 600;
         color: var(--accent);
-        margin: 1rem 0 0.8rem;
-        letter-spacing: 0.5px;
+        margin-bottom: 1rem;
       }
 
       p {
@@ -60,39 +67,30 @@
         margin-bottom: 1.2rem;
       }
 
-      .pfp {
-        border-radius: 20px;
-        width: 110px;
-        height: auto;
-        box-shadow: 0 4px 14px rgba(255, 138, 201, 0.25);
-        border: 2px solid var(--accent);
-        transition: transform 0.3s ease;
-      }
-
-      .pfp:hover {
-        transform: scale(1.05);
-      }
-
       .list {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         font-size: 0.95rem;
-        text-align: center;
       }
 
       .list a {
-        color: var(--text-light);
-        margin: 0 0.6rem;
-        transition: color 0.2s ease, text-shadow 0.3s ease;
+        color: var(--accent);
+        margin: 0 0.5rem;
+        text-decoration: none;
+        border-radius: 0.4rem;
+        padding: 0.2rem 0.4rem;
+        transition: background 0.2s ease;
       }
 
       .list a:hover {
-        color: var(--accent-hover);
-        text-shadow: 0 0 6px var(--accent);
+        background: rgba(255, 138, 201, 0.1);
       }
 
-      @media(max-width: 680px) {
+      @media (max-width: 680px) {
         main {
           padding: 1.5rem 1rem;
+        }
+        h1 {
+          font-size: 1.6rem;
         }
       }
     </style>
@@ -105,29 +103,28 @@
         class="pfp"
       />
 
-      <h1>Fyrna/Nazan</h1>
+      <h1>Fyrna / Nazan</h1>
+
+      <p><i>
+        know a little about everything, but not an expert in anything
+      </i></p>
 
       <p>
-        <b><i>know a little about everything, but not an expert in anything</i></b>
+        An average self-taught programmer who enjoys writing code for fun.
+        I focus on building things that do one job well and keeping them simple.
+        Most of my work is personal experiments, which you can find on my GitHub.
       </p>
-      <p>
-        An average self-taught programmer who enjoys writing code for fun. I
-        focus on building things that do one job well and keeping them simple.
-        Most of my work is personal experiments, which you can find on my
-        GitHub.
-      </p>
+
       <p>
         Outside programming, I love exploring new things, anime, music, and
-        writing little pieces of thoughts whenever inspiration comes.
+        writing little thoughts whenever inspiration comes.
       </p>
 
       <div class="list">
-        <p>
-          you can find me here: <br />
-          <a href="https://github.com/fyrna">github</a> •
-          <a href="https://t.me/fyrna">telegram</a> •
-          <a href="https://x.com/imfyrna">x</a>
-        </p>
+        <p>find me:</p>
+        <a href="https://github.com/fyrna">github</a>
+        <a href="https://t.me/fyrna">telegram</a>
+        <a href="https://x.com/imfyrna">x</a>
       </div>
     </main>
   </body>
