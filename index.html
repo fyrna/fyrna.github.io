@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fyrna</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -16,7 +16,6 @@
         --accent: #ff8ac9;
         --accent-hover: #ffb6d9;
         --border: #2a2a2a;
-        --radius: 1rem;
       }
 
       * {
@@ -26,72 +25,60 @@
       }
 
       body {
-        font-family: "Nunito", sans-serif;
-        font-size: 15px;
-        line-height: 1.7;
+        font-family: "Inter", system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
         color: var(--text);
         background: var(--bg);
         display: flex;
         justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        padding: 1rem;
+        padding: 2rem;
       }
 
       main {
-        max-width: 60ch;
-        padding: 2rem;
-        background: #141414;
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        text-align: center;
+        max-width: 65ch;
+        width: 100%;
       }
 
       .pfp {
-        border-radius: var(--radius);
-        width: 100px;
-        height: auto;
+        display: block;
+        border-radius: 1rem;
+        width: 120px;
         border: 2px solid var(--accent);
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
       }
 
       h1 {
-        font-size: 1.9rem;
+        font-size: 2rem;
         font-weight: 600;
         color: var(--accent);
         margin-bottom: 1rem;
       }
 
       p {
-        color: var(--text-light);
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 1.5rem 0;
       }
 
       .list {
-        margin-top: 1.5rem;
-        font-size: 0.95rem;
+        margin-top: 1rem;
       }
 
       .list a {
         color: var(--accent);
-        margin: 0 0.5rem;
+        margin-right: 1rem;
         text-decoration: none;
-        border-radius: 0.4rem;
-        padding: 0.2rem 0.4rem;
-        transition: background 0.2s ease;
+        font-weight: 600;
+        transition: color 0.2s ease;
       }
 
       .list a:hover {
-        background: rgba(255, 138, 201, 0.1);
-      }
-
-      @media (max-width: 680px) {
-        main {
-          padding: 1.5rem 1rem;
-        }
-        h1 {
-          font-size: 1.6rem;
-        }
+        color: var(--accent-hover);
       }
     </style>
   </head>
@@ -105,23 +92,24 @@
 
       <h1>Fyrna / Nazan</h1>
 
-      <p><i>
-        know a little about everything, but not an expert in anything
-      </i></p>
-
       <p>
-        An average self-taught programmer who enjoys writing code for fun.
-        I focus on building things that do one job well and keeping them simple.
-        Most of my work is personal experiments, which you can find on my GitHub.
+        My name is Nazan, but you probably find me online as Fyrna. I'm a
+        self-taught programmer writing code for fun. Mostly in Go, since Go is
+        my favorite language. I also learn a bit of Zig and TypeScript.
       </p>
 
       <p>
-        Outside programming, I love exploring new things, anime, music, and
-        writing little thoughts whenever inspiration comes.
+        Besides programming, I love exploring new things, watching anime,
+        listening to music, and writing down my thoughts.
       </p>
+
+      <hr />
 
       <div class="list">
-        <p>find me:</p>
+        <p>
+          I'm not really a social person, so here are the only places where I'm
+          active:
+        </p>
         <a href="https://github.com/fyrna">github</a>
         <a href="https://t.me/fyrna">telegram</a>
         <a href="https://x.com/imfyrna">x</a>
