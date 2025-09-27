@@ -10,12 +10,8 @@
     />
     <style>
       :root {
-        --bg: #0d0d0d;
-        --text: #eaeaea;
-        --text-light: #aaa;
-        --accent: #ff8ac9;
-        --accent-hover: #ffb6d9;
-        --border: #2a2a2a;
+        --bg: #fff;
+        --text: #222;
       }
 
       * {
@@ -26,93 +22,148 @@
 
       body {
         font-family: "Inter", system-ui, sans-serif;
-        font-size: 16px;
-        line-height: 1.8;
-        color: var(--text);
         background: var(--bg);
-        display: flex;
-        justify-content: center;
-        padding: 2rem;
+        min-height: 100vh;
+        color: var(--text);
       }
 
       main {
-        max-width: 65ch;
-        width: 100%;
+        max-width: 50ch;
+        margin: auto;
+        padding: 2rem;
       }
 
       .pfp {
-        display: block;
         border-radius: 1rem;
         width: 120px;
-        border: 2px solid var(--accent);
         margin-bottom: 1.5rem;
       }
 
       h1 {
         font-size: 2rem;
         font-weight: 600;
-        color: var(--accent);
+        margin: 0;
         margin-bottom: 1rem;
       }
 
-      p {
-        margin-bottom: 1.5rem;
+      .tagline {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1rem;
       }
 
-      hr {
+      .bio {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #444;
+        margin-bottom: 2rem;
+      }
+
+      .links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        align-items: stretch;
+      }
+
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .card img {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 0.5rem;
+      }
+
+      .card p {
+        margin: 0.3rem 0;
+      }
+
+      .btn {
+        margin-top: 0.5rem;
+        padding: 0.4rem 1rem;
         border: none;
-        border-top: 1px solid var(--border);
-        margin: 1.5rem 0;
+        border-radius: 9999px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.09);
+        background: #1da1f2;
+        color: #fff;
       }
 
-      .list {
-        margin-top: 1rem;
-      }
-
-      .list a {
-        color: var(--accent);
-        margin-right: 1rem;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.2s ease;
-      }
-
-      .list a:hover {
-        color: var(--accent-hover);
+      .twitter {
+        grid-column: span 2;
       }
     </style>
   </head>
+
   <body>
     <main>
       <img
-        src="https://avatars.githubusercontent.com/u/121859424?v=4"
+        src="./icon.jpg"
         alt="fyrna's pfp"
         class="pfp"
       />
 
       <h1>Fyrna / Nazan</h1>
 
-      <p>
-        My name is Nazan, but you probably find me online as Fyrna. I'm a
-        self-taught programmer writing code for fun. Mostly in Go, since Go is
-        my favorite language. I also learn a bit of Zig and TypeScript.
+      <p class="tagline">
+        Full-time tinkerer | selt-taught programmer
       </p>
 
-      <p>
-        Besides programming, I love exploring new things, watching anime,
-        listening to music, and writing down my thoughts.
+      <p class="bio">
+        I do code sometimes, mostly in Go since that's my fav language, I also
+        learn a bit of Zig and Typescript.
       </p>
 
-      <hr />
+      <div class="links">
+        <div class="card">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg"
+            alt="GitHub"
+          />
 
-      <div class="list">
-        <p>
-          I'm not really a social person, so here are the only places where I'm
-          active:
-        </p>
-        <a href="https://github.com/fyrna">github</a>
-        <a href="https://t.me/fyrna">telegram</a>
-        <a href="https://x.com/imfyrna">x</a>
+          <p><b>My Github</b></p>
+
+          <a href="https://github.com/fyrna">
+            <button class="btn">See what i do</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/telegram.svg"
+            alt="Telegram"
+          />
+
+          <p><b>Chat with me :3</b></p>
+
+          <a href="https://t.me/fyrna">
+            <button class="btn">Send Hi!</button>
+          </a>
+        </div>
+
+        <div class="card twitter">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg"
+            alt="Twitter"
+          />
+
+          <p><b>@imfyrna</b></p>
+          <p style="font-size: 0.8rem; color: #666">
+            know a little about everything,<br />
+            but not an expert in anything
+          </p>
+
+          <a href="https://x.com/imfyrna">
+            <button class="btn">Follow</button>
+          </a>
+        </div>
       </div>
     </main>
   </body>
