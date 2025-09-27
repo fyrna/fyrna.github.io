@@ -69,35 +69,58 @@
       .card {
         border: 1px solid #ddd;
         border-radius: 20px;
-        padding: 1rem;
-        text-align: center;
+        padding: 1rem 1.5rem;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       }
 
       .card img {
-        width: 32px;
-        height: 32px;
-        margin-bottom: 0.5rem;
+        width: 36px;
+        margin-bottom: 0.2rem;
       }
 
       .card p {
-        margin: 0.3rem 0;
+        margin: 0.5rem 0;
+      }
+
+      .card-bio {
+        font-size: 0.85rem;
+        color: #666;
+        line-height: 1.4;
       }
 
       .btn {
-        margin-top: 0.5rem;
+        font-weight: 600;
         padding: 0.4rem 1rem;
         border: none;
-        border-radius: 9999px;
         cursor: pointer;
         font-size: 0.9rem;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.09);
-        background: #1da1f2;
-        color: #fff;
+      }
+
+      .normal-btn {
+        padding: 0.5rem 0.7rem;
+        border-radius: 5px;
+        border: solid 1px #cbcbcb;
+        background-color: #f6f6f6;
       }
 
       .twitter {
+        text-align: left;
         grid-column: span 2;
+        padding: 1rem 1.5rem;
+      }
+
+      .tw-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .tw-btn {
+        border-radius: 9999px;
+        background: #1da1f2;
+        color: #fff;
       }
     </style>
   </head>
@@ -128,10 +151,10 @@
             alt="GitHub"
           />
 
-          <p><b>My Github</b></p>
+          <p class="card-bio">some codes</p>
 
           <a href="https://github.com/fyrna">
-            <button class="btn">See what i do</button>
+            <button class="btn normal-btn">view</button>
           </a>
         </div>
 
@@ -141,28 +164,28 @@
             alt="Telegram"
           />
 
-          <p><b>Chat with me :3</b></p>
+          <p class="card-bio">chat with me :3</p>
 
           <a href="https://t.me/fyrna">
-            <button class="btn">Send Hi!</button>
+            <button class="btn tw-btn">send Hi!</button>
           </a>
         </div>
 
         <div class="card twitter">
-          <img
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg"
-            alt="Twitter"
-          />
+          <div class="tw-top">
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg"
+              alt="Twitter"
+            />
+            <a href="https://x.com/imfyrna">
+              <button class="btn tw-btn">follow</button>
+            </a>
+          </div>
 
-          <p><b>@imfyrna</b></p>
-          <p style="font-size: 0.8rem; color: #666">
-            know a little about everything,<br />
-            but not an expert in anything
+          <p>@imfyrna</p>
+          <p class="card-bio">
+            know a little about everything, but not an expert in anything
           </p>
-
-          <a href="https://x.com/imfyrna">
-            <button class="btn">Follow</button>
-          </a>
         </div>
       </div>
     </main>
